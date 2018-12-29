@@ -1,9 +1,8 @@
-import React from "react";
+import React, { Fragment } from "react";
 
 const Buttons = props => {
-  console.log(props);
   return (
-    <div>
+    <Fragment>
       <div style={{ paddingTop: "10px" }}>
         <button onClick={props.increment}>increase</button>
         <button onClick={props.decrement}>decrease</button>
@@ -48,7 +47,7 @@ const Buttons = props => {
           <p>{`dec clicked: ${props.counter.decClicked}`}</p>
         </div>
       </section>
-    </div>
+    </Fragment>
   );
 };
 
