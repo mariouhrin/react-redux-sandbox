@@ -4,7 +4,7 @@ import { Route, Switch } from "react-router-dom";
 import Header from "./Header";
 import Home from "./Home";
 import NavHeader from "./NavHeader";
-import Test from "./Test";
+import Topics from "./Topics";
 import ButtonsContainer from "./../containers/ButtonsContainer";
 
 import "../styles/App.css";
@@ -16,7 +16,7 @@ const App = () => (
       <Route exact path="/" component={Home} />
       <Route path="/header" component={Header} />
       <Route path="/buttons" component={ButtonsContainer} />
-      <Route path="/test" render={props => <Test {...props} />} />
+      <Route path="/topics" component={Topics} />
     </Switch>
   </div>
 );

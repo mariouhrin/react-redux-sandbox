@@ -1,6 +1,7 @@
 import React, { Fragment } from "react";
 
 const Buttons = props => {
+  console.log(props);
   return (
     <Fragment>
       <div style={{ paddingTop: "10px" }}>

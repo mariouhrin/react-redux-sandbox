@@ -13,7 +13,7 @@ const NavHeader = props => (
       style={{
         display: "flex",
         justifyContent: "space-between",
-        width: "25%"
+        width: "30%"
       }}
     >
       <NavLink to="/">
@@ -31,9 +31,9 @@ const NavHeader = props => (
           Buttons
         </button>
       </NavLink>
-      <NavLink to="/test">
+      <NavLink to="/topics">
         <button className="pure-button pure-button-primary" type="button">
-          Test
+          Topics
         </button>
       </NavLink>
     </div>
