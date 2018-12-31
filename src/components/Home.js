@@ -1,7 +1,11 @@
 import React, { Component, Fragment } from "react";
+import Form from "./Form";
 
-const Content = () => {
+const Content = ({ show }) => {
   const items = ["First Item", "Second Item", "Third Item"];
+  if (show) {
+    return null;
+  }
 
   return (
     <section style={{ display: "flex", justifyContent: "center" }}>
@@ -28,12 +32,13 @@ class Home extends Component {
 
     return (
       <Fragment>
-        <h2>This is my app</h2>
-        <h3>Choose what you want to see</h3>
+        <h2>This is my testing react-redux app</h2>
+        <h3>Click to some upper button for changing routes and UI Content</h3>
         <button onClick={this.handleClick} className="pure-button">
           {show ? "Show Content" : "Hide Content"}
         </button>
-        {!show ? <Content /> : null}
+        <Content show={show} />
+        <Form show={show} />
       </Fragment>
     );
   }

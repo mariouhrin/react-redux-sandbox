@@ -13,17 +13,19 @@ const Topics = ({ match }) => {
   return (
     <div>
       <h2>Topics</h2>
-      <ul>
-        <li>
-          <Link to={`${match.url}/rendering`}>Rendering with React</Link>
-        </li>
-        <li>
-          <Link to={`${match.url}/components`}>Components</Link>
-        </li>
-        <li>
-          <Link to={`${match.url}/props-v-state`}>Props v. State</Link>
-        </li>
-      </ul>
+      <div style={{ display: "flex", justifyContent: "center" }}>
+        <ul style={{ textAlign: "left" }}>
+          <li>
+            <Link to={`${match.url}/rendering`}>Rendering with React</Link>
+          </li>
+          <li>
+            <Link to={`${match.url}/components`}>Components</Link>
+          </li>
+          <li>
+            <Link to={`${match.url}/props-v-state`}>Props v. State</Link>
+          </li>
+        </ul>
+      </div>
 
       <Route path={`${match.path}/:topicId`} component={Topic} />
       <Route
