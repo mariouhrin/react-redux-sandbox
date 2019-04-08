@@ -1,5 +1,7 @@
-import React, { Component, Fragment } from "react";
+import React, { Component, Fragment, lazy, Suspense } from "react";
 import Form from "./Form";
+
+const MyLazyImage = lazy(() => import("./Lazy-image"));
 
 const Content = ({ show }) => {
   const items = ["First Item", "Second Item", "Third Item"];
@@ -39,6 +41,11 @@ class Home extends Component {
         </button>
         <Content show={show} />
         <Form show={show} />
+        {show ? null : (
+          <Suspense fallback={<div>Hello</div>}>
+            <MyLazyImage />
+          </Suspense>
+        )}
       </Fragment>
     );
   }
